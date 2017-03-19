@@ -63,7 +63,7 @@ Creative Commons Attribution-ShareAlike 4.0 International License.
 
 \begin{itemize}
 \item Old \textsc{Matlab} teaching PDF
-  with very simple example function {\color{blue}\lstinline|linear|}.
+  with very simple example function {\color{blue}\lstinline|linear|}
 
 \item Students trying to call their first function \underline{failed}!
 
@@ -75,10 +75,10 @@ Invalid calling syntax for the "linear" command. Type
 \end{lstlisting}
 
 \item<2> The function \href{https://www.mathworks.com/help/ident/ref/linear.html}{linear}
-became 2007 part of Matlab's System Identification Toolbox.
-\item<2> $\implies$ Need to rewrite documentation.
+became 2007 part of Matlab's System Identification Toolbox
+\item<2> $\implies$ Need to rewrite documentation
 \item<2> Decision to use \texttt{publish}
-  (not part of GNU Octave before 4.2.0).
+  (not part of GNU Octave before 4.2.0)
 \end{itemize}
 \end{frame}
 
@@ -115,6 +115,8 @@ accordingly in the legend.
 \end{itemize}
 
 $\implies$ \textbf{Bad user experience, questions, bug reports}
+{\tiny (\href{https://savannah.gnu.org/bugs/index.php?50282}{\#50282}
+\href{https://savannah.gnu.org/bugs/index.php?50148}{\#50148},\ldots)}
 \end{frame}
 
 
@@ -129,25 +131,23 @@ Intended for ``small to medium'' sized \textbf{scripts}:
 \begin{itemize}\itemsep1em
 \item One section level
 \item Supports HTML and \LaTeX\ (PDF) output (but see later)
-\item No anchors, cross references (but URLs)
+\item No cross references (but URLs)
 \item No function \textit{docstring} or class documentation
 \end{itemize}
 
 \vfill
 
-$\implies$ No substitute for \LaTeX\ or Texinfo.
-
-TODO: discussion at Mailing list or Bug-Tracker about run demos, run
+$\implies$ No substitute for \LaTeX\ or Texinfo
 \end{frame}
 
 
 
-\section{A short demo}
+\section{Two short demos}
 
 
 
 \begin{frame}[fragile]
-\frametitle{A short demo}
+\frametitle{Two short demos}
 
 \begin{itemize}
 \item Simple markup in comment blocks
@@ -236,90 +236,6 @@ TODO: discussion at Mailing list or Bug-Tracker about run demos, run
 
 
 
-\section{Yet another Markup language?}
-
-
-
-\begin{frame}[fragile]
-\frametitle{Yet another Markup language?}
-\framesubtitle{--- Yes!}
-
-\href{https://www.gnu.org/software/octave/doc/interpreter/Publishing-Markup.html}{Publishing markup}
-inside Octave comment blocks:\\[1em]
-
-\scriptsize
-\begin{columns}
-\begin{column}{.2\textwidth}
-{\color{blue}Format}  \\[1em]
-
-\textbf{bold}
-
-\textit{italic}
-
-\texttt{monospaced}
-
-URL with label
-
-Graphics
-\end{column}
-\begin{column}{.3\textwidth}
-{\color{blue}Publishing Markup} \\[1em]
-
-\lstinline|*bold*|
-
-\lstinline|_italic_|
-
-\lstinline{|monospaced|}
-
-\lstinline|<http://url.org label>|
-
-\lstinline|<<fig.png>>|
-\end{column}
-\begin{column}{.3\textwidth}
-{\color{blue}GNU Texinfo} \\[1em]
-
-\lstinline|@b{bold}|
-
-\lstinline|@i{italic}|
-
-\lstinline|@t{monospaced}|
-
-\lstinline|@uref{http://url.org, label}|
-
-\lstinline|@image{fig.png}|
-\end{column}
-\end{columns}
-
-\begin{columns}
-\begin{column}{.2\textwidth}
-\begin{itemize}
-\item Item 1
-\item Item 2
-\end{itemize}
-\ldots
-\end{column}
-\begin{column}{.3\textwidth}
-\begin{lstlisting}
-* Item 1
-* Item 2
-\end{lstlisting}
-\end{column}
-\begin{column}{.3\textwidth}
-\begin{lstlisting}
-@itemize @bullet
-@item
-Item 1
-
-@item
-Item 2
-@end itemize
-\end{lstlisting}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
 \section{Customize publish}
 
 
@@ -328,8 +244,8 @@ Item 2
 \frametitle{Customize \texttt{publish} (GNU Octave 4.3.0+)}
 
 \begin{itemize}
-\item Pure Octave code $\rightarrow$ easy to extend/modify.
-\item Designed for extension :
+\item Pure Octave code $\rightarrow$ easy to extend/modify
+\item Designed for extension:
   \begin{itemize}
   \item Implement all callback subfunctions in some
     {\color{blue}\lstinline|__publish_my_markup_output__.m|} and run
