@@ -1,6 +1,5 @@
 function publishToWiki (script_file, usr_name, usr_pw)
-# Does currently not work (API disabled).
-wiki_api = "http://wiki.octave.org/api.php";
+wiki_api = "http://wiki.octave.org/wiki/api.php";
 
 # Use formatter "__publish_wiki_output__.m"
 opts.format = "wiki";
