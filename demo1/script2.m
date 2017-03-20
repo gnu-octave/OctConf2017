@@ -242,13 +242,13 @@ plot (x, y);     # Plot some sine
 %
 % In an LaTeX document, this markup
 %
-%  <latex>
+%  &lt;latex>
 %  \begin{equation}
 %  \begin{pmatrix}
 %  1 & 2 \\ 3 & 4
 %  \end{pmatrix}
 %  \end{equation}
-%  </latex>
+%  &lt;/latex>
 %
 % will print a nice matrix:
 %
