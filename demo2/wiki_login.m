@@ -1,10 +1,4 @@
 function wiki_login(wiki_api, username, password)
-#
-#
-
-wiki_api = char ("http://wiki.octave.org/wiki/api.php");
-username = char ("siko1056");
-password = char ("werner1988");
 
 # Establish cookie management
 cookie_manager = javaObject ("java.net.CookieManager");
