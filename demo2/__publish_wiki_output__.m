@@ -149,6 +149,14 @@ function outstr = do_text (str)
   outstr = ["\n", str, "\n"];
 endfunction
 
+function outstr = do_blockmath (str)
+  outstr = ["<math>" str "</math>"];
+endfunction
+
+function outstr = do_inlinemath (str)
+  outstr = ["<math>" str "</math>"];
+endfunction
+
 function outstr = do_bold (str)
   outstr = ["'''", str, "'''"];
 endfunction
@@ -167,4 +175,11 @@ endfunction
 
 function outstr = do_R ()
   outstr = "&reg;";
+endfunction
+
+function str = do_escape_special_chars (str)
+  str = regexprep (str, '&', '&amp;');
+  str = regexprep (str, '<', '&lt;');
+  str = regexprep (str, '>', '&gt;');
+  ## str = regexprep (str, '"', '&quot;'); ## MATLAB R2017a compatibility.
 endfunction
